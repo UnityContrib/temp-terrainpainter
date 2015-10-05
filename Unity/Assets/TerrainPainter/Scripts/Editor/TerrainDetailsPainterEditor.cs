@@ -170,7 +170,7 @@ public class TerrainDetailsPainterEditor : Editor
                     if (rule.UseSlopeRange)
                     {
                         var normalizedPosition = terrain.DetailsToNormalizedPosition(x, y);
-                        var slope = this.data.GetSteepness(normalizedPosition.y, normalizedPosition.x);
+                        var slope = this.data.GetSteepness(normalizedPosition.x, normalizedPosition.y);
                         if (slope < rule.MinimumSlope || slope >= rule.MaximumSlope)
                         {
                             detailsLayer = details[rule.DetailIndex];

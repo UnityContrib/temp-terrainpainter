@@ -84,7 +84,8 @@ public static class Common
 
     public static float CalculateSlopeRad(this Vector3 normal)
     {
-        return Mathf.Acos(Mathf.Clamp(normal.y, -1.0f, 1.0f));
+        return Mathf.Abs(Vector3.Dot(Vector3.up, normal));
+        //return Mathf.Acos(Mathf.Clamp(normal.y, -1.0f, 1.0f));
     }
 
     public static float CalculateSlopeDeg(this Vector3 normal)
